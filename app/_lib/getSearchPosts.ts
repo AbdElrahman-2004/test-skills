@@ -8,13 +8,11 @@ export function getSearchPosts(
   const searchedPosts = useMemo(() => {
     const q = query?.toLowerCase().trim();
     if (!q) return posts;
-    return posts.filter((post) => {
-      console.log(post.title.includes(q) && 1);
-      return (
+    return posts.filter(
+      (post) =>
         post.title.toLowerCase().includes(q) ||
         post.body.toLowerCase().includes(q)
-      );
-    });
+    );
   }, [query, posts]);
 
   return searchedPosts;

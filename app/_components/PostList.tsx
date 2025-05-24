@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { getSearchPosts } from "../lib/getSearchPosts";
+import { getSearchPosts } from "../_lib/getSearchPosts";
 import Post from "./Post";
 import { PostData } from "../_types/types";
 

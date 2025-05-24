@@ -1,6 +1,4 @@
 "use server";
-
-import { useSearchParams } from "next/navigation";
 import { PostData } from "../_types/types";
 
 export default async function useGetData() {
