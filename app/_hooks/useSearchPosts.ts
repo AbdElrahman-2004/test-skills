@@ -1,7 +1,7 @@
 import { PostData } from "../_types/types";
 import { useMemo } from "react";
 
-export function getSearchPosts(
+export function useSearchPosts(
   posts: PostData[],
   query: string | null
 ): PostData[] {

@@ -1,11 +1,11 @@
-import { Suspense } from "react";
+import { Suspense, use } from "react";
 import PostList from "./_components/PostList";
 import Navbar from "./_components/Navbar";
 import Loading from "./loading";
 import useGetData from "./_hooks/useGetData";
 
-export default async function Home() {
-  const data = await useGetData();
+export default function Home() {
+  const data = use(useGetData());
 
   return (
     <div>
