@@ -11,10 +11,14 @@ export default function PostList({ data }: { data: PostData[] }) {
   const posts = useSearchPosts(data, q);
 
   return (
-    <div className="flex justify-center items-stretch flex-wrap w-full mt-3">
-      {posts.map((post) => (
-        <Post key={`${post.id}-${post.userId}`} {...post} />
-      ))}
+    <div>
+      {" "}
+      <div>Number of results: {posts.length}</div>
+      <div className="flex justify-center items-stretch flex-wrap w-full mt-3">
+        {posts.map((post) => (
+          <Post key={`${post.id}-${post.userId}`} {...post} />
+        ))}
+      </div>
     </div>
   );
 }
